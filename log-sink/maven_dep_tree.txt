@@ -1,0 +1,301 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building log-sink 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ log-sink ---
+[WARNING] Using Maven 2 dependency tree to get verbose output, which may be inconsistent with actual Maven 3 resolution
+[INFO] artifact io.netty:netty-codec-http2: checking for updates from spring-snapshots
+[INFO] artifact io.netty:netty-codec-http2: checking for updates from spring-milestones
+[INFO] artifact io.netty:netty-codec-http2: checking for updates from central
+[INFO] artifact io.grpc:grpc-core: checking for updates from spring-snapshots
+[INFO] artifact io.grpc:grpc-core: checking for updates from spring-milestones
+[INFO] artifact io.grpc:grpc-core: checking for updates from central
+[INFO] io.pivotal.gcp:log-sink:jar:0.0.1-SNAPSHOT
+[INFO] +- io.projectreactor:reactor-core:jar:3.0.3.RELEASE:compile
+[INFO] |  \- org.reactivestreams:reactive-streams:jar:1.0.0:compile
+[INFO] +- com.google.guava:guava:jar:19.0:compile
+[INFO] +- org.springframework.cloud:spring-cloud-stream-binder-pubsub:jar:1.1.0.BUILD-SNAPSHOT:compile
+[INFO] |  +- org.springframework.cloud:spring-cloud-stream:jar:1.1.0.RELEASE:compile (version managed from 1.1.0.BUILD-SNAPSHOT)
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-actuator:jar:1.5.1.RELEASE:compile (version managed from 1.4.1.RELEASE)
+[INFO] |  |  |  +- org.springframework.boot:spring-boot-starter:jar:1.5.1.RELEASE:compile
+[INFO] |  |  |  |  +- org.springframework.boot:spring-boot:jar:1.5.1.RELEASE:compile
+[INFO] |  |  |  |  |  +- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  |  \- (org.springframework:spring-context:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:1.5.1.RELEASE:compile
+[INFO] |  |  |  |  |  \- (org.springframework.boot:spring-boot:jar:1.5.1.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  +- (org.springframework.boot:spring-boot-starter-logging:jar:1.5.1.RELEASE:compile - version managed from 1.3.5.RELEASE; omitted for duplicate)
+[INFO] |  |  |  |  +- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  \- org.yaml:snakeyaml:jar:1.17:runtime
+[INFO] |  |  |  \- org.springframework.boot:spring-boot-actuator:jar:1.5.1.RELEASE:compile
+[INFO] |  |  |     +- (org.springframework.boot:spring-boot:jar:1.5.1.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     +- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.1.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     +- (com.fasterxml.jackson.core:jackson-databind:jar:2.8.6:compile - omitted for duplicate)
+[INFO] |  |  |     +- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     \- (org.springframework:spring-context:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-web:jar:1.5.1.RELEASE:compile (version managed from 1.4.1.RELEASE)
+[INFO] |  |  |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.1.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- org.hibernate:hibernate-validator:jar:5.3.4.Final:compile
+[INFO] |  |  |  |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  |  |  +- org.jboss.logging:jboss-logging:jar:3.3.0.Final:compile
+[INFO] |  |  |  |  \- com.fasterxml:classmate:jar:1.3.3:compile (version managed from 1.3.1)
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.8.6:compile
+[INFO] |  |  |  |  +- (com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile - version managed from 2.8.3; omitted for duplicate)
+[INFO] |  |  |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.8.6:compile
+[INFO] |  |  |  +- org.springframework:spring-web:jar:4.3.6.RELEASE:compile
+[INFO] |  |  |  |  +- (org.springframework:spring-aop:jar:4.3.6.RELEASE:compile - version managed from 4.3.3.RELEASE; omitted for duplicate)
+[INFO] |  |  |  |  +- (org.springframework:spring-beans:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  +- (org.springframework:spring-context:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  \- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- org.springframework:spring-webmvc:jar:4.3.6.RELEASE:compile
+[INFO] |  |  |     +- (org.springframework:spring-aop:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     +- (org.springframework:spring-beans:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     +- (org.springframework:spring-context:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     +- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     +- org.springframework:spring-expression:jar:4.3.6.RELEASE:compile
+[INFO] |  |  |     |  \- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |     \- (org.springframework:spring-web:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-validation:jar:1.5.1.RELEASE:compile (version managed from 1.4.1.RELEASE)
+[INFO] |  |  |  +- (org.springframework.boot:spring-boot-starter:jar:1.5.1.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.11:compile
+[INFO] |  |  |  \- (org.hibernate:hibernate-validator:jar:5.3.4.Final:compile - omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-messaging:jar:4.3.6.RELEASE:compile (version managed from 4.3.3.RELEASE)
+[INFO] |  |  |  +- org.springframework:spring-beans:jar:4.3.6.RELEASE:compile
+[INFO] |  |  |  |  \- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  +- org.springframework:spring-context:jar:4.3.6.RELEASE:compile
+[INFO] |  |  |  |  +- (org.springframework:spring-aop:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  +- (org.springframework:spring-beans:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  +- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  \- (org.springframework:spring-expression:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- org.springframework:spring-core:jar:4.3.6.RELEASE:compile
+[INFO] |  |  +- org.springframework.integration:spring-integration-core:jar:4.3.4.RELEASE:compile (version managed from 4.3.2.RELEASE)
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - version managed from 4.3.3.RELEASE; omitted for duplicate)
+[INFO] |  |  |  +- org.springframework:spring-aop:jar:4.3.6.RELEASE:compile
+[INFO] |  |  |  |  +- (org.springframework:spring-beans:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  \- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - version managed from 4.3.3.RELEASE; omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-context:jar:4.3.6.RELEASE:compile - version managed from 4.3.3.RELEASE; omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-messaging:jar:4.3.6.RELEASE:compile - version managed from 4.3.3.RELEASE; omitted for duplicate)
+[INFO] |  |  |  +- org.springframework:spring-tx:jar:4.3.6.RELEASE:compile (version managed from 4.3.3.RELEASE)
+[INFO] |  |  |  |  +- (org.springframework:spring-beans:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  |  \- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - version managed from 4.3.3.RELEASE; omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework.retry:spring-retry:jar:1.2.0.RELEASE:compile - version managed from 1.1.4.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.springframework.integration:spring-integration-jmx:jar:4.3.7.RELEASE:compile (version managed from 4.3.2.RELEASE)
+[INFO] |  |  |  \- (org.springframework.integration:spring-integration-core:jar:4.3.4.RELEASE:compile - version managed from 4.3.7.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-tuple:jar:1.0.0.RELEASE:compile
+[INFO] |  |  |  +- (com.esotericsoftware:kryo-shaded:jar:3.0.3:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - version managed from 4.2.6.RELEASE; omitted for duplicate)
+[INFO] |  |  |  +- (com.fasterxml.jackson.core:jackson-databind:jar:2.8.6:compile - version managed from 2.6.6; omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-context:jar:4.3.6.RELEASE:compile - version managed from 4.2.6.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.springframework.integration:spring-integration-tuple:jar:1.0.0.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-tuple:jar:1.0.0.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework.integration:spring-integration-core:jar:4.3.4.RELEASE:compile - version managed from 4.2.5.RELEASE; omitted for duplicate)
+[INFO] |  |  \- org.springframework.retry:spring-retry:jar:1.2.0.RELEASE:compile
+[INFO] |  |     \- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - version managed from 4.3.3.RELEASE; omitted for duplicate)
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jetty:jar:1.5.1.RELEASE:compile (version managed from 1.4.2.BUILD-SNAPSHOT)
+[INFO] |  |  +- org.eclipse.jetty:jetty-servlets:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-continuation:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-http:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  |  +- (org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  |  \- (org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  \- org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:compile
+[INFO] |  |  |     \- (org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  +- org.eclipse.jetty:jetty-webapp:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-xml:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  |  \- (org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  \- org.eclipse.jetty:jetty-servlet:jar:9.4.1.v20170120:compile
+[INFO] |  |  |     \- org.eclipse.jetty:jetty-security:jar:9.4.1.v20170120:compile
+[INFO] |  |  |        \- org.eclipse.jetty:jetty-server:jar:9.4.1.v20170120:compile
+[INFO] |  |  |           +- (javax.servlet:javax.servlet-api:jar:3.1.0:compile - omitted for duplicate)
+[INFO] |  |  |           +- (org.eclipse.jetty:jetty-http:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |           \- (org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  +- org.eclipse.jetty.websocket:websocket-server:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  +- org.eclipse.jetty.websocket:websocket-common:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  |  +- org.eclipse.jetty.websocket:websocket-api:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  |  +- (org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  |  \- (org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  +- org.eclipse.jetty.websocket:websocket-client:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  |  +- (org.eclipse.jetty:jetty-util:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  |  +- (org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  |  +- org.eclipse.jetty:jetty-client:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  |  |  +- (org.eclipse.jetty:jetty-http:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  |  |  \- (org.eclipse.jetty:jetty-io:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  |  \- (org.eclipse.jetty.websocket:websocket-common:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  +- org.eclipse.jetty.websocket:websocket-servlet:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  |  +- (org.eclipse.jetty.websocket:websocket-api:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  |  \- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[INFO] |  |  |  +- (org.eclipse.jetty:jetty-servlet:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.eclipse.jetty:jetty-http:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  +- org.eclipse.jetty.websocket:javax-websocket-server-impl:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  +- org.eclipse.jetty:jetty-annotations:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  |  +- org.eclipse.jetty:jetty-plus:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  |  |  \- (org.eclipse.jetty:jetty-webapp:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  |  +- (org.eclipse.jetty:jetty-webapp:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  |  +- javax.annotation:javax.annotation-api:jar:1.2:compile
+[INFO] |  |  |  |  +- org.ow2.asm:asm:jar:5.1:compile
+[INFO] |  |  |  |  \- org.ow2.asm:asm-commons:jar:5.1:compile
+[INFO] |  |  |  |     \- org.ow2.asm:asm-tree:jar:5.1:compile
+[INFO] |  |  |  |        \- (org.ow2.asm:asm:jar:5.1:compile - omitted for duplicate)
+[INFO] |  |  |  +- org.eclipse.jetty.websocket:javax-websocket-client-impl:jar:9.4.1.v20170120:compile
+[INFO] |  |  |  |  +- (org.eclipse.jetty.websocket:websocket-client:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  |  \- (javax.websocket:javax.websocket-api:jar:1.0:compile - omitted for duplicate)
+[INFO] |  |  |  +- (org.eclipse.jetty.websocket:websocket-server:jar:9.4.1.v20170120:compile - omitted for duplicate)
+[INFO] |  |  |  \- javax.websocket:javax.websocket-api:jar:1.0:compile
+[INFO] |  |  \- org.mortbay.jasper:apache-el:jar:8.0.33:compile
+[INFO] |  +- org.springframework.cloud:spring-cloud-stream-codec:jar:1.1.0.RELEASE:compile (version managed from 1.1.0.BUILD-SNAPSHOT)
+[INFO] |  |  +- com.esotericsoftware:kryo-shaded:jar:3.0.3:compile
+[INFO] |  |  |  +- com.esotericsoftware:minlog:jar:1.3.0:compile
+[INFO] |  |  |  \- org.objenesis:objenesis:jar:2.1:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0:compile
+[INFO] |  +- (io.projectreactor:reactor-core:jar:2.0.8.RELEASE:compile - version managed from 3.0.3.BUILD-SNAPSHOT; omitted for conflict with 3.0.3.RELEASE)
+[INFO] |  \- com.google.cloud:google-cloud-pubsub:jar:0.5.1:compile
+[INFO] |     +- io.netty:netty-tcnative-boringssl-static:jar:1.1.33.Fork19:compile
+[INFO] |     +- com.google.cloud:google-cloud-core:jar:0.5.1:compile
+[INFO] |     |  +- com.google.auth:google-auth-library-credentials:jar:0.3.1:compile
+[INFO] |     |  +- com.google.auth:google-auth-library-oauth2-http:jar:0.3.1:compile
+[INFO] |     |  |  +- (com.google.auth:google-auth-library-credentials:jar:0.3.1:compile - omitted for duplicate)
+[INFO] |     |  |  +- (com.google.http-client:google-http-client:jar:1.19.0:compile - omitted for conflict with 1.21.0)
+[INFO] |     |  |  \- com.google.http-client:google-http-client-jackson2:jar:1.19.0:compile
+[INFO] |     |  |     +- (com.google.http-client:google-http-client:jar:1.19.0:compile - omitted for duplicate)
+[INFO] |     |  |     \- (com.fasterxml.jackson.core:jackson-core:jar:2.8.6:compile - version managed from 2.1.3; omitted for duplicate)
+[INFO] |     |  +- com.google.http-client:google-http-client:jar:1.21.0:compile
+[INFO] |     |  |  +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO] |     |  |  \- org.apache.httpcomponents:httpclient:jar:4.5.2:compile (version managed from 4.0.1)
+[INFO] |     |  |     +- org.apache.httpcomponents:httpcore:jar:4.4.6:compile (version managed from 4.4.4)
+[INFO] |     |  |     \- commons-codec:commons-codec:jar:1.10:compile (version managed from 1.9)
+[INFO] |     |  +- com.google.oauth-client:google-oauth-client:jar:1.21.0:compile
+[INFO] |     |  |  +- (com.google.http-client:google-http-client:jar:1.21.0:compile - omitted for duplicate)
+[INFO] |     |  |  \- (com.google.code.findbugs:jsr305:jar:1.3.9:compile - omitted for duplicate)
+[INFO] |     |  +- (com.google.guava:guava:jar:18.0:compile - version managed from 19.0; omitted for conflict with 19.0)
+[INFO] |     |  +- com.google.api-client:google-api-client-appengine:jar:1.21.0:compile
+[INFO] |     |  |  +- com.google.oauth-client:google-oauth-client-appengine:jar:1.21.0:compile
+[INFO] |     |  |  |  +- (com.google.http-client:google-http-client-appengine:jar:1.21.0:compile - omitted for duplicate)
+[INFO] |     |  |  |  +- (com.google.oauth-client:google-oauth-client:jar:1.21.0:compile - omitted for duplicate)
+[INFO] |     |  |  |  +- com.google.oauth-client:google-oauth-client-servlet:jar:1.21.0:compile
+[INFO] |     |  |  |  |  +- (com.google.oauth-client:google-oauth-client:jar:1.21.0:compile - omitted for duplicate)
+[INFO] |     |  |  |  |  +- com.google.http-client:google-http-client-jdo:jar:1.21.0:compile
+[INFO] |     |  |  |  |  |  +- (com.google.http-client:google-http-client:jar:1.21.0:compile - omitted for duplicate)
+[INFO] |     |  |  |  |  |  \- (javax.jdo:jdo2-api:jar:2.3-eb:compile - omitted for duplicate)
+[INFO] |     |  |  |  |  +- (javax.servlet:servlet-api:jar:2.5:compile - omitted for duplicate)
+[INFO] |     |  |  |  |  \- (javax.jdo:jdo2-api:jar:2.3-eb:compile - omitted for duplicate)
+[INFO] |     |  |  |  \- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] |     |  |  +- com.google.api-client:google-api-client:jar:1.21.0:compile
+[INFO] |     |  |  |  +- (com.google.oauth-client:google-oauth-client:jar:1.21.0:compile - omitted for duplicate)
+[INFO] |     |  |  |  \- (com.google.http-client:google-http-client-jackson2:jar:1.21.0:compile - omitted for conflict with 1.19.0)
+[INFO] |     |  |  +- com.google.api-client:google-api-client-servlet:jar:1.21.0:compile
+[INFO] |     |  |  |  +- (com.google.oauth-client:google-oauth-client-servlet:jar:1.21.0:compile - omitted for duplicate)
+[INFO] |     |  |  |  +- (com.google.api-client:google-api-client:jar:1.21.0:compile - omitted for duplicate)
+[INFO] |     |  |  |  +- (javax.servlet:servlet-api:jar:2.5:compile - omitted for duplicate)
+[INFO] |     |  |  |  \- javax.jdo:jdo2-api:jar:2.3-eb:compile
+[INFO] |     |  |  |     \- javax.transaction:transaction-api:jar:1.1:compile
+[INFO] |     |  |  \- com.google.http-client:google-http-client-appengine:jar:1.21.0:compile
+[INFO] |     |  |     \- (com.google.http-client:google-http-client:jar:1.21.0:compile - omitted for duplicate)
+[INFO] |     |  +- com.google.http-client:google-http-client-jackson:jar:1.21.0:compile
+[INFO] |     |  |  +- (com.google.http-client:google-http-client:jar:1.21.0:compile - omitted for duplicate)
+[INFO] |     |  |  \- org.codehaus.jackson:jackson-core-asl:jar:1.9.11:compile
+[INFO] |     |  +- joda-time:joda-time:jar:2.9.7:compile (version managed from 2.9.2)
+[INFO] |     |  +- org.json:json:jar:20140107:compile (version managed from 20151123)
+[INFO] |     |  +- com.google.protobuf:protobuf-java:jar:3.0.0:compile
+[INFO] |     |  +- io.grpc:grpc-protobuf:jar:1.0.1:compile
+[INFO] |     |  |  +- (com.google.guava:guava:jar:18.0:compile - version managed from 19.0; omitted for conflict with 19.0)
+[INFO] |     |  |  +- (com.google.protobuf:protobuf-java:jar:3.0.0:compile - omitted for duplicate)
+[INFO] |     |  |  +- com.google.protobuf:protobuf-java-util:jar:3.0.0:compile
+[INFO] |     |  |  |  +- (com.google.protobuf:protobuf-java:jar:3.0.0:compile - omitted for duplicate)
+[INFO] |     |  |  |  +- (com.google.guava:guava:jar:18.0:compile - version managed from 19.0; omitted for conflict with 19.0)
+[INFO] |     |  |  |  \- com.google.code.gson:gson:jar:2.8.0:compile (version managed from 2.3)
+[INFO] |     |  |  +- (io.grpc:grpc-core:jar:1.0.1:compile - omitted for duplicate)
+[INFO] |     |  |  \- io.grpc:grpc-protobuf-lite:jar:1.0.1:compile
+[INFO] |     |  |     +- (com.google.guava:guava:jar:18.0:compile - version managed from 19.0; omitted for conflict with 19.0)
+[INFO] |     |  |     \- (io.grpc:grpc-core:jar:1.0.1:compile - omitted for duplicate)
+[INFO] |     |  +- com.google.api:gax:jar:0.0.21:compile
+[INFO] |     |  |  +- (com.google.guava:guava:jar:18.0:compile - version managed from 19.0; omitted for conflict with 19.0)
+[INFO] |     |  |  +- com.google.auto.value:auto-value:jar:1.2:compile
+[INFO] |     |  |  +- (joda-time:joda-time:jar:2.9.7:compile - version managed from 2.8.2; omitted for duplicate)
+[INFO] |     |  |  +- com.google.inject:guice:jar:4.0:compile
+[INFO] |     |  |  |  +- javax.inject:javax.inject:jar:1:compile
+[INFO] |     |  |  |  +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |     |  |  |  \- (com.google.guava:guava:jar:18.0:compile - version managed from 16.0.1; omitted for conflict with 19.0)
+[INFO] |     |  |  +- (com.google.code.findbugs:jsr305:jar:3.0.0:compile - omitted for conflict with 1.3.9)
+[INFO] |     |  |  \- (com.google.auth:google-auth-library-oauth2-http:jar:0.4.0:compile - omitted for conflict with 0.3.1)
+[INFO] |     |  +- com.google.api.grpc:grpc-google-common-protos:jar:0.1.0:compile
+[INFO] |     |  |  \- (com.google.protobuf:protobuf-java:jar:3.0.0:compile - omitted for duplicate)
+[INFO] |     |  \- com.google.api.grpc:grpc-google-iam-v1:jar:0.1.0:compile
+[INFO] |     |     \- (com.google.protobuf:protobuf-java:jar:3.0.0:compile - omitted for duplicate)
+[INFO] |     +- com.google.api.grpc:grpc-google-pubsub-v1:jar:0.1.0:compile
+[INFO] |     |  +- (com.google.protobuf:protobuf-java:jar:3.0.0:compile - omitted for duplicate)
+[INFO] |     |  +- (com.google.api.grpc:grpc-google-common-protos:jar:0.1.0:compile - omitted for duplicate)
+[INFO] |     |  \- (com.google.api.grpc:grpc-google-iam-v1:jar:0.1.0:compile - omitted for duplicate)
+[INFO] |     +- io.grpc:grpc-netty:jar:1.0.1:compile
+[INFO] |     |  +- io.netty:netty-codec-http2:jar:4.1.3.Final:compile
+[INFO] |     |  |  +- io.netty:netty-codec-http:jar:4.1.3.Final:compile
+[INFO] |     |  |  |  \- io.netty:netty-codec:jar:4.1.3.Final:compile
+[INFO] |     |  |  |     \- (io.netty:netty-transport:jar:4.1.3.Final:compile - omitted for duplicate)
+[INFO] |     |  |  \- io.netty:netty-handler:jar:4.1.3.Final:compile
+[INFO] |     |  |     +- io.netty:netty-buffer:jar:4.1.3.Final:compile
+[INFO] |     |  |     |  \- io.netty:netty-common:jar:4.1.3.Final:compile
+[INFO] |     |  |     +- io.netty:netty-transport:jar:4.1.3.Final:compile
+[INFO] |     |  |     |  +- (io.netty:netty-buffer:jar:4.1.3.Final:compile - omitted for duplicate)
+[INFO] |     |  |     |  \- io.netty:netty-resolver:jar:4.1.3.Final:compile
+[INFO] |     |  |     |     \- (io.netty:netty-common:jar:4.1.3.Final:compile - omitted for duplicate)
+[INFO] |     |  |     \- (io.netty:netty-codec:jar:4.1.3.Final:compile - omitted for duplicate)
+[INFO] |     |  \- io.grpc:grpc-core:jar:1.0.1:compile
+[INFO] |     |     +- (com.google.guava:guava:jar:18.0:compile - version managed from 19.0; omitted for conflict with 19.0)
+[INFO] |     |     +- io.grpc:grpc-context:jar:1.0.1:compile
+[INFO] |     |     \- (com.google.code.findbugs:jsr305:jar:3.0.0:compile - omitted for conflict with 1.3.9)
+[INFO] |     +- io.grpc:grpc-stub:jar:1.0.1:compile
+[INFO] |     |  \- (io.grpc:grpc-core:jar:1.0.1:compile - omitted for duplicate)
+[INFO] |     \- io.grpc:grpc-auth:jar:1.0.1:compile
+[INFO] |        +- (com.google.auth:google-auth-library-credentials:jar:0.4.0:compile - omitted for conflict with 0.3.1)
+[INFO] |        \- (io.grpc:grpc-core:jar:1.0.1:compile - omitted for duplicate)
+[INFO] +- org.springframework.cloud.stream.app:spring-cloud-starter-stream-sink-log:jar:1.1.0.RC1:compile
+[INFO] |  +- (org.springframework.cloud:spring-cloud-stream:jar:1.1.0.RELEASE:compile - version managed from 1.1.0.BUILD-SNAPSHOT; omitted for duplicate)
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.2.0:compile (version managed from 2.0.0)
+[INFO] |  |  +- net.minidev:json-smart:jar:2.2.1:compile
+[INFO] |  |  |  \- net.minidev:accessors-smart:jar:1.1:compile
+[INFO] |  |  |     \- (org.ow2.asm:asm:jar:5.0.3:compile - omitted for conflict with 5.1)
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:1.7.22:compile
+[INFO] |  +- org.springframework.integration:spring-integration-xml:jar:4.3.7.RELEASE:compile (version managed from 4.2.5.RELEASE)
+[INFO] |  |  +- (org.springframework.integration:spring-integration-core:jar:4.3.4.RELEASE:compile - version managed from 4.3.7.RELEASE; omitted for duplicate)
+[INFO] |  |  +- org.springframework:spring-oxm:jar:4.3.6.RELEASE:compile
+[INFO] |  |  |  +- (org.springframework:spring-beans:jar:4.3.6.RELEASE:compile - omitted for duplicate)
+[INFO] |  |  |  \- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - version managed from 4.3.3.RELEASE; omitted for duplicate)
+[INFO] |  |  \- org.springframework.ws:spring-xml:jar:2.3.0.RELEASE:compile
+[INFO] |  \- org.springframework.boot:spring-boot-starter-logging:jar:1.5.1.RELEASE:compile
+[INFO] |     +- ch.qos.logback:logback-classic:jar:1.1.9:compile
+[INFO] |     |  +- ch.qos.logback:logback-core:jar:1.1.9:compile
+[INFO] |     |  \- (org.slf4j:slf4j-api:jar:1.7.22:compile - version managed from 1.7.16; omitted for duplicate)
+[INFO] |     +- org.slf4j:jcl-over-slf4j:jar:1.7.22:compile
+[INFO] |     |  \- (org.slf4j:slf4j-api:jar:1.7.22:compile - version managed from 1.7.16; omitted for duplicate)
+[INFO] |     +- org.slf4j:jul-to-slf4j:jar:1.7.22:compile
+[INFO] |     |  \- (org.slf4j:slf4j-api:jar:1.7.22:compile - version managed from 1.7.16; omitted for duplicate)
+[INFO] |     \- org.slf4j:log4j-over-slf4j:jar:1.7.22:compile
+[INFO] |        \- (org.slf4j:slf4j-api:jar:1.7.22:compile - version managed from 1.7.16; omitted for duplicate)
+[INFO] \- org.springframework.boot:spring-boot-starter-test:jar:1.5.1.RELEASE:test
+[INFO]    +- org.springframework.boot:spring-boot-test:jar:1.5.1.RELEASE:test
+[INFO]    |  \- (org.springframework.boot:spring-boot:jar:1.5.1.RELEASE:compile - scope updated from test; omitted for duplicate)
+[INFO]    +- org.springframework.boot:spring-boot-test-autoconfigure:jar:1.5.1.RELEASE:test
+[INFO]    |  +- (org.springframework.boot:spring-boot-test:jar:1.5.1.RELEASE:test - omitted for duplicate)
+[INFO]    |  \- (org.springframework.boot:spring-boot-autoconfigure:jar:1.5.1.RELEASE:compile - scope updated from test; omitted for duplicate)
+[INFO]    +- (com.jayway.jsonpath:json-path:jar:2.2.0:test - version managed from 2.0.0; omitted for duplicate)
+[INFO]    +- junit:junit:jar:4.12:test
+[INFO]    |  \- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO]    +- org.assertj:assertj-core:jar:2.6.0:test
+[INFO]    +- org.mockito:mockito-core:jar:1.10.19:test
+[INFO]    |  +- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO]    |  \- (org.objenesis:objenesis:jar:2.1:compile - scope updated from test; omitted for duplicate)
+[INFO]    +- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO]    +- org.hamcrest:hamcrest-library:jar:1.3:test
+[INFO]    |  \- (org.hamcrest:hamcrest-core:jar:1.3:test - version managed from 1.1; omitted for duplicate)
+[INFO]    +- org.skyscreamer:jsonassert:jar:1.4.0:test
+[INFO]    |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO]    +- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - version managed from 4.3.3.RELEASE; scope updated from test; omitted for duplicate)
+[INFO]    \- org.springframework:spring-test:jar:4.3.6.RELEASE:test
+[INFO]       \- (org.springframework:spring-core:jar:4.3.6.RELEASE:compile - version managed from 4.3.3.RELEASE; scope updated from test; omitted for duplicate)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.493 s
+[INFO] Finished at: 2017-02-14T14:15:47-05:00
+[INFO] Final Memory: 39M/656M
+[INFO] ------------------------------------------------------------------------
