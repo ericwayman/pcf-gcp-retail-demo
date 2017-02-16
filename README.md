@@ -22,6 +22,12 @@ with a Processor in between.
 1. Create a PubSub service instance: `cf cs google-pubsub default pubsub`
 1. Run a script to push the three Boot apps, bind to pubsub, and start them: `./scripts/scdf_source_proc_sink.sh`
 
+You will see the logs scrolling by as the app is deployed, bound, started.  Once that finishes, you can
+look at the logs for the log-sink app, to see if entries occur every second, when the time-source emits
+them: `cf logs log-sink`
+
+
+
 ## Resources
 * [Document showing how to create Spring Cloud Stream components bound to Google PubSub](./docs/GooglePubSubBinderandSCDF.pdf)
 * [Spring Cloud Dataflow Server](https://storage.googleapis.com/mgoddard-jars/spring-cloud-dataflow-server-cloudfoundry-1.1.1.BUILD-SNAPSHOT.jar),
