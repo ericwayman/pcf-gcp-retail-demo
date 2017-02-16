@@ -1,8 +1,8 @@
-# PCF on GCP Retail Demo
+# PCF + GCP Retail Demo
 
 ![Diagram showing major components and how data flows](./images/data_flow_diagram.png)
 
-## A demonstration of combining PCF running on GCP to help retailers stay close to their customers
+## A demo for retailers to see how PCF and GCP turn streams of data into action. 
 
 ## Prerequisites
 * Install the GCP Service Broker, available on [GitHub](https://github.com/GoogleCloudPlatform/gcp-service-broker)
