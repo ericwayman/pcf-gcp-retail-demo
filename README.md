@@ -19,14 +19,15 @@ or [Pivotal Network](https://network.pivotal.io/products/gcp-service-broker/)
 * [Spring Cloud Dataflow Server, with changes to specify Google Cloud role during bind](https://storage.googleapis.com/mgoddard-jars/spring-cloud-dataflow-server-cloudfoundry-1.1.1.BUILD-SNAPSHOT.jar)
   That version of the SCDF Server JAR was built with a patched version of [Spring Cloud Deployer for Cloud Foundry](https://github.com/spring-cloud/spring-cloud-deployer-cloudfoundry),
   to specify the Google Cloud role at bind time. The CloudFoundryAppDeployer.java file was modified:
-        ```
-        private Mono<Void> requestBindService(String deploymentId, String service) {
-          return this.operations.services()
-            .bind(BindServiceInstanceRequest.builder()
-            .parameter("role", "pubsub.admin") // This was added
-            .applicationName(deploymentId)
-            .serviceInstanceName(service)
-            .build());
-        }
-        ```
+
+```
+  private Mono<Void> requestBindService(String deploymentId, String service) {
+    return this.operations.services()
+      .bind(BindServiceInstanceRequest.builder()
+      .parameter("role", "pubsub.admin") // This was added
+      .applicationName(deploymentId)
+      .serviceInstanceName(service)
+      .build());
+  }
+```
 
