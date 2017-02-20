@@ -11,7 +11,7 @@ public class TransformProcessor {
 
     @ServiceActivator(inputChannel = Processor.INPUT, outputChannel = Processor.OUTPUT)
     public Object transform(Object payload) {
-        System.out.println("TransformProcessor: " + payload);
+        System.out.println("TransformProcessor, payload => \"" + payload + "\"");
         return payload;
     }
 

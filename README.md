@@ -30,6 +30,7 @@ them: `cf logs log-sink`
 
 ## Resources
 * [Document showing how to create Spring Cloud Stream components bound to Google PubSub](./docs/GooglePubSubBinderandSCDF.pdf)
+* [Spring Initializr for Stream Apps](http://start-scs.cfapps.io/)
 * [Spring Cloud Dataflow Server](https://storage.googleapis.com/mgoddard-jars/spring-cloud-dataflow-server-cloudfoundry-1.1.1.BUILD-SNAPSHOT.jar),
   with changes to specify Google Cloud role during bind. That version of the SCDF Server JAR was built
   with a patched version of
