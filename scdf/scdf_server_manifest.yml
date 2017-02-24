@@ -3,7 +3,7 @@ applications:
 - name: dataflow-server
   host: dataflow-server
   memory: 1G
-  disk_quota: 1G
+  disk_quota: 4G
   timeout: 180
   instances: 1
   path: ./spring-cloud-dataflow-server-cloudfoundry-1.2.0.BUILD-SNAPSHOT.jar
