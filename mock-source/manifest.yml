@@ -1,0 +1,9 @@
+---
+applications:
+- name: mock-source
+  memory: 128MB
+  disk_quota: 1G
+  buildpack: python_buildpack
+  command: python mock-source.py
+  host: mock-source
+
