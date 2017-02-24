@@ -29,12 +29,13 @@ to build a customized module.
 1. Access the SCDF Dashboard (at `https://dataflow-server.YOUR_PCF_INSTALL.DOMAIN/dashboard/`)
 1. Start the SCDF Client you downloaded in a previous step: `java -jar spring-cloud-dataflow-shell-1.1.2.RELEASE.jar`
 
-## Set up an example SCDF stream
+## Set up the SCDF stream "data backbone"
 Initially, configure a simple stream to illustate the following data flow:
-* [Social media API client](./mock-source) periodically POSTs data to ...
-* a SCDF HTTP Source (this one is the standard, out of the box app),
-* which is routed through a [SCDF Processor](./transform-proc), where data normalization and enrichment are done.
-* Finally, the stream terminates at a [SCDF Sink](./log-sink) component.
+* [Social media API client](./mock-source) (see 3, 4, 5 in diagram) periodically POSTs data to ...
+* a SCDF HTTP Source (item 6 in the diagram),
+* which is routed through a custom [SCDF Processor](./transform-proc) (item 8 in diagram),
+  where data normalization and enrichment are done.
+* Finally, the stream terminates with the [SCDF Sink](./log-sink) component (item 17 in diagram).
 
 ### Build and upload your SCDF modules
 1. Build the Processor project: `( cd ./transform-proc/ && ./mvnw clean package )`
@@ -76,7 +77,7 @@ Initially, configure a simple stream to illustate the following data flow:
 
 ### Simulate the social media API interaction, sending events
 * Find the URL for this "mock-source" app, from the output of `cf apps`
-* Simulate the flow of events through this endpoint: `while `true` ; do curl http://mock-source.apps.pcfongcp.com/datetime ; sleep $( perl -e 'print int(1 + 15*rand()) . "\n";' ) ; done`
+* Simulate the flow of events through this endpoint: `while `true` ; do curl http://mock-source.YOUR_PCF_INSTALL.DOMAIN/datetime ; sleep $( perl -e 'print int(1 + 15*rand()) . "\n"' ) ; done`
 * Tail the logs for the sink, the app whose name ends in "-log-ps": `cf logs dataflow-server-hf30QYI-socialmedia-log-ps`
 
 Every so often (at intevals ranging from 1 to 15 seconds), a log entry should appear:
@@ -84,8 +85,26 @@ Every so often (at intevals ranging from 1 to 15 seconds), a log entry should ap
 2017-02-24T06:55:36.95-0500 [APP/PROC/WEB/0]OUT 2017-02-24 11:55:36.955  INFO 20 --- [c.socialmedia-1] log.sink                                 : {"date-time": "02/24/17 11:55:36"} (11 days 'til GCP NEXT)
 ```
 
+### Review of what we have, so far
+* "mock-source" represents the yet-to-be-implemented social media data source,
+  and we can POST data to it. As envisioned, there would be several such components,
+  all falling within this "DATA" area of the diagram, one per social media platform.
+  The way this is decoupled, by having only a REST interface with the SCDF HTTP Hub,
+  allows for developers to build each of these using whichever technology is most
+  appropriate, the best match for the skills of the team and the social media API.
+* SCDF HTTP Hub is just an out-of-the-box SCDF app.  Its role here is simply to accept
+  inputs from any of the disparate sources, and put these into the data stream.
+* SCDF Processor, so far, is accepting input, which so far is just the simple JSON
+  string representing the current date and time, as defined in mock-source:
+  `{"date-time": "02/24/17 02:04:23"}`.  It parses the JSON message, computes the
+  number of days between the given date and the date of the GCP NEXT, defined within
+  `./transform-proc/src/main/resources/application.properties`, enriches that data
+  stream based on this computation, and emits the result into its outbound channel.
+* SCDF Sink simply takes this input and logs it.
+
 ## Resources
 * [Document showing how to create Spring Cloud Stream components bound to Google PubSub](./docs/GooglePubSubBinderandSCDF.pdf)
 * [Spring Initializr for Stream Apps](http://start-scs.cfapps.io/)
+* [Read this](http://docs.spring.io/spring-cloud-dataflow-server-cloudfoundry/docs/1.1.1.RELEASE/reference/htmlsingle/#getting-started-maximum-disk-quota-configuration) if SCDF Server runs out of disk space.
 
 
