@@ -82,7 +82,7 @@ Initially, configure a simple stream to illustate the following data flow:
 
 Every so often (at intevals ranging from 1 to 15 seconds), a log entry should appear:
 ```
-2017-02-24T06:55:36.95-0500 [APP/PROC/WEB/0]OUT 2017-02-24 11:55:36.955  INFO 20 --- [c.socialmedia-1] log.sink                                 : {"date-time": "02/24/17 11:55:36"} (11 days 'til GCP NEXT)
+2017-02-24T06:55:36.95-0500 [APP/PROC/WEB/0]OUT 2017-02-24 11:55:36.955  INFO 20 --- [c.socialmedia-1] log.sink                                 : {"date_time": "02/24/17 11:55:36"} (11 days 'til GCP NEXT)
 ```
 
 ### Review of what we have, so far

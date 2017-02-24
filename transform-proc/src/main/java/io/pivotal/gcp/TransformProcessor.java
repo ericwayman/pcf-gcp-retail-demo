@@ -2,6 +2,8 @@ package io.pivotal.gcp;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import io.pivotal.gcp.domain.MockSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -27,19 +29,20 @@ public class TransformProcessor {
     @ServiceActivator(inputChannel = Processor.INPUT, outputChannel = Processor.OUTPUT)
     public Object transform(Object payload) {
         System.out.println("TransformProcessor, payload => \"" + payload + "\"");
-        ObjectMapper mapper = new ObjectMapper(); // Field in class, with @Bean?
-        JsonNode root;
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE);
         try {
-            root = mapper.readTree(payload.toString());
+            MockSource mockSource = mapper.readValue(payload.toString(), MockSource.class);
+            System.out.println("TransformProcessor, date-time => \"" + mockSource.getDateTime() + "\"");
+            // dateTimeString is a String with this format: "02/21/17 14:13:33"
+            LocalDateTime dateTime = LocalDateTime.from(dtFormat.parse(mockSource.getDateTime()));
+            Duration deltaT = Duration.between(dateTime, gcpNextDate);
+            //payload += " (" + deltaT.toDays() + " days 'til GCP NEXT)";
+            mockSource.setDaysUntilMessage(deltaT.toDays() + " days 'til GCP NEXT");
+            payload = mapper.writeValueAsString(mockSource);
         } catch (IOException e) {
             throw new ProcessorException(e);
         }
-        String dateTimeString = root.path("date-time").textValue();
-        System.out.println("TransformProcessor, date-time => \"" + dateTimeString + "\"");
-        // dateTimeString is a String with this format: "02/21/17 14:13:33"
-        LocalDateTime dateTime = LocalDateTime.from(dtFormat.parse(dateTimeString));
-        Duration deltaT = Duration.between(dateTime, gcpNextDate);
-        payload += " (" + deltaT.toDays() + " days 'til GCP NEXT)";
         System.out.println("TransformProcessor, transformed result => \"" + payload + "\"");
         return payload;
     }

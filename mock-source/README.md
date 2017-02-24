@@ -1,25 +1,17 @@
-# A simple image resizing service
+# Mock Social Media Source for the Retail Demo
 
-## How it works
-Accepts HTTP GET or POST, with two parameters:
-* urlBase64: Base64 encoded URL
-* size: size of a square bounding box, in pixels
-Returns the resized image, or an image of the original size if size is less than the original size
+This is a little stand-in for future social media API adapters which will be
+our data sources.
 
-## Try it out locally (see note below on dependencies)
-* Get a base64 encoded version of an image URL:
-  `echo -n "http://storage.googleapis.com/myBucketName/Image_Name.jpg" | base64`
-* Use curl to access the service, providing that base64 encoded URL value:
-  `time curl http://localhost:18080/?size=800&urlBase64=aHR0cDovL3N0b3J...bi5qcGc= > output.jpg`
+## For details on deploying this, running it, see the parent README
+[Parent README](../README.md)
 
-## Run on Cloud Foundry
-* Edit ./manifest.yml to suit your application
-* `cf push`
+## Notable features
+See the [code](./mock-source.py), where this object is constructed:
 
-## Installation of dependencies, for running locally (Ubuntu 14.04)
-```
-sudo apt-get build-dep python-imaging
-sudo apt-get install libjpeg8 libjpeg62-dev libfreetype6 libfreetype6-dev
-sudo apt-get install python-pip
-sudo pip install Pillow
-```
+  `data = { 'date_time': d1.strftime('%m/%d/%y %I:%M:%S'), 'source': SOURCE_NAME }`
+
+The idea is that each of the various sources will include a field, "source", which
+indicates which source it's dealing with.  This could be used within the Java code
+to indicated which class to map the incoming JSON data to, for deserialization.
+

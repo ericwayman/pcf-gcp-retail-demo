@@ -25,6 +25,7 @@ SERVICE_NAME = 'http-hub'
 # Fetch the URI of the HTTP Source from VCAP_SERVICES
 uri = None
 USER_PROVIDED = 'user-provided'
+SOURCE_NAME = 'mock'
 vcap = json.loads(os.getenv('VCAP_SERVICES', '{}'))
 if USER_PROVIDED in vcap:
   for cred in vcap[USER_PROVIDED]:
@@ -50,7 +51,7 @@ def sendJson(msg):
 @app.route('/datetime')
 def sendDate():
   d1 = datetime.now()
-  data = { 'date-time': d1.strftime('%m/%d/%y %I:%M:%S') }
+  data = { 'date_time': d1.strftime('%m/%d/%y %I:%M:%S'), 'source': SOURCE_NAME }
   return sendJson(data)
 
 @app.route('/status')
