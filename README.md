@@ -106,5 +106,24 @@ Every so often (at intevals ranging from 1 to 15 seconds), a log entry should ap
 * [Document showing how to create Spring Cloud Stream components bound to Google PubSub](./docs/GooglePubSubBinderandSCDF.pdf)
 * [Spring Initializr for Stream Apps](http://start-scs.cfapps.io/)
 * [Read this](http://docs.spring.io/spring-cloud-dataflow-server-cloudfoundry/docs/1.1.1.RELEASE/reference/htmlsingle/#getting-started-maximum-disk-quota-configuration) if SCDF Server runs out of disk space.
+* We may want to look at validating the inputs coming from the various sources.
+  Something like this, as is done with [GitHub "webhooks"](https://developer.github.com/webhooks/),
+  might work:
+```python
+      # Validate signature against GitHub Webhook secret, only if environment variable
+      # GIT_WEBHOOK_SECRET is set
+      global git_webhook_secret
+      if git_webhook_secret:
+        log("Comparing SHA1 digests for payload")
+        if type(git_webhook_secret) == unicode:
+          git_webhook_secret = git_webhook_secret.encode()
+        signature = request.headers.get("X-Hub-Signature").split('=')[1]
+        mac = hmac.new(git_webhook_secret, msg = request.data, digestmod = sha1)
+        if compare_digest(u'{0}'.format(mac.hexdigest()), u'{0}'.format(signature)):
+          log("Digests match -- proceeding")
+        else:
+          log("Digests don't match -- aborting")
+          abort(403)
+```
 
 
