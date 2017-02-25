@@ -126,4 +126,11 @@ Every so often (at intevals ranging from 1 to 15 seconds), a log entry should ap
           abort(403)
 ```
 * One possibly useful [Instagram API client](https://github.com/LevPasha/Instagram-API-python)
+* [Article](https://spring.io/guides/gs/consuming-rest/) on consuming REST services in Spring apps
+  This is pretty much it (`Quote` is a domain object):
+  ```
+  RestTemplate restTemplate = new RestTemplate();
+  Quote quote = restTemplate.getForObject("http://some.url.com/quote", Quote.class);
+  log.info(quote.toString());
+  ```
 
