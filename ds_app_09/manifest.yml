@@ -1,0 +1,9 @@
+---
+applications:
+- name: ds_app_09
+  memory: 128MB
+  disk_quota: 1G
+  buildpack: python_buildpack
+  command: python ds_app_09.py
+  host: ds_app_09
+
