@@ -110,27 +110,27 @@ Every so often (at intevals ranging from 1 to 15 seconds), a log entry should ap
   Something like this, as is done with [GitHub "webhooks"](https://developer.github.com/webhooks/),
   might work:
 ```python
-      # Validate signature against GitHub Webhook secret, only if environment variable
-      # GIT_WEBHOOK_SECRET is set
-      global git_webhook_secret
-      if git_webhook_secret:
-        log("Comparing SHA1 digests for payload")
-        if type(git_webhook_secret) == unicode:
-          git_webhook_secret = git_webhook_secret.encode()
-        signature = request.headers.get("X-Hub-Signature").split('=')[1]
-        mac = hmac.new(git_webhook_secret, msg = request.data, digestmod = sha1)
-        if compare_digest(u'{0}'.format(mac.hexdigest()), u'{0}'.format(signature)):
-          log("Digests match -- proceeding")
-        else:
-          log("Digests don't match -- aborting")
-          abort(403)
+  # Validate signature against GitHub Webhook secret, only if environment variable
+  # GIT_WEBHOOK_SECRET is set
+  global git_webhook_secret
+  if git_webhook_secret:
+    log("Comparing SHA1 digests for payload")
+    if type(git_webhook_secret) == unicode:
+      git_webhook_secret = git_webhook_secret.encode()
+    signature = request.headers.get("X-Hub-Signature").split('=')[1]
+    mac = hmac.new(git_webhook_secret, msg = request.data, digestmod = sha1)
+    if compare_digest(u'{0}'.format(mac.hexdigest()), u'{0}'.format(signature)):
+      log("Digests match -- proceeding")
+    else:
+      log("Digests don't match -- aborting")
+      abort(403)
 ```
 * One possibly useful [Instagram API client](https://github.com/LevPasha/Instagram-API-python)
 * [Article](https://spring.io/guides/gs/consuming-rest/) on consuming REST services in Spring apps
   This is pretty much it (`Quote` is a domain object):
-  ```
+```java
   RestTemplate restTemplate = new RestTemplate();
   Quote quote = restTemplate.getForObject("http://some.url.com/quote", Quote.class);
   log.info(quote.toString());
-  ```
+```
 
