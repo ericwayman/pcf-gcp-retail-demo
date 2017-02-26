@@ -118,6 +118,13 @@ Now the log entries appearing here should show new features in the JSON, similar
 2017-02-26T06:25:51.15-0500 [APP/PROC/WEB/0]OUT 2017-02-26 11:25:51.157  INFO 18 --- [c.socialmedia-1] log.sink                                 : {"date_time": "02/26/17 11:25:51", "sentiment": {"magnitude": 0.9, "score": 0.4}, "source": "mock", "days_until_message": "9 days 'til GCP NEXT"}
 ```
 
+### Review: current state
+* With this change, the SCDF Processor (8) is able to interact with the Data Science Interrogator (9).
+* So far, pending a fleshed out version of (9), it only adds an example of what the Google Cloud
+  Language API would provide, for sentiment: `"sentiment": {"magnitude": 0.9, "score": 0.4}`
+* One that REST interaction is complete, (8) simply emits the enriched message back onto the message
+  queue for downstream processing.
+
 ## Resources
 * [Document showing how to create Spring Cloud Stream components bound to Google PubSub](./docs/GooglePubSubBinderandSCDF.pdf)
 * [Spring Initializr for Stream Apps](http://start-scs.cfapps.io/)
