@@ -149,11 +149,5 @@ Now the log entries appearing here should show new features in the JSON, similar
       abort(403)
 ```
 * One possibly useful [Instagram API client](https://github.com/LevPasha/Instagram-API-python)
-* [Article](https://spring.io/guides/gs/consuming-rest/) on consuming REST services in Spring apps
-  This is pretty much it (`Quote` is a domain object):
-```java
-  RestTemplate restTemplate = new RestTemplate();
-  Quote quote = restTemplate.getForObject("http://some.url.com/quote", Quote.class);
-  log.info(quote.toString());
-```
+* Google Language API, syntax [example](https://github.com/GoogleCloudPlatform/python-docs-samples/blob/master/language/syntax_triples/main.py)
 
