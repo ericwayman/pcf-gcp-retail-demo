@@ -82,7 +82,7 @@ Initially, configure a simple stream to illustate the following data flow:
 
 Every so often (at intevals ranging from 1 to 15 seconds), a log entry should appear:
 ```
-2017-02-24T06:55:36.95-0500 [APP/PROC/WEB/0]OUT 2017-02-24 11:55:36.955  INFO 20 --- [c.socialmedia-1] log.sink                                 : {"date_time": "02/24/17 11:55:36"} (11 days 'til GCP NEXT)
+2017-02-26T06:25:51.15-0500 [APP/PROC/WEB/0]OUT 2017-02-26 11:25:51.157  INFO 18 --- [c.socialmedia-1] log.sink                                 : {"date_time": "02/26/17 11:25:51", "source": "mock", "days_until_message": "9 days 'til GCP NEXT"}
 ```
 
 ### Review of what we have, so far
@@ -101,6 +101,22 @@ Every so often (at intevals ranging from 1 to 15 seconds), a log entry should ap
   `./transform-proc/src/main/resources/application.properties`, enriches that data
   stream based on this computation, and emits the result into its outbound channel.
 * SCDF Sink simply takes this input and logs it.
+
+## Add the "Data Science Interrogator App", number 9 in the diagram
+1. Stop that curl command loop
+1. Add the new app: `( cd ./ds_app_09/ && cf push )`
+1. Use `cf apps` to find the URL for this new app
+1. Update `transform-proc/src/main/resources/application.properties` with this URL value
+1. Rebuild this app, then upload it as before
+1. Using the SCDF Dashboard, delete the existing stream ("Destroy")
+1. Re-create that stream, using "Create Stream", as before
+1. Resume that curl command loop
+1. Resume tailing the logs for the app whose name ends with "-log-ps"
+
+Now the log entries appearing here should show new features in the JSON, similar to this:
+```
+2017-02-26T06:25:51.15-0500 [APP/PROC/WEB/0]OUT 2017-02-26 11:25:51.157  INFO 18 --- [c.socialmedia-1] log.sink                                 : {"date_time": "02/26/17 11:25:51", "sentiment": {"magnitude": 0.9, "score": 0.4}, "source": "mock", "days_until_message": "9 days 'til GCP NEXT"}
+```
 
 ## Resources
 * [Document showing how to create Spring Cloud Stream components bound to Google PubSub](./docs/GooglePubSubBinderandSCDF.pdf)

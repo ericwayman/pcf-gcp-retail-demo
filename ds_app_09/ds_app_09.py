@@ -11,10 +11,11 @@ def logMsg(args):
     print "[Instance: %s] %s" % (str(os.getenv("CF_INSTANCE_INDEX", 0)), args)
 
 # Handle JSON
-# Simple No-Op which just logs the input and passes it back to the caller
+# Simulate adding a "sentiment" attribute
 @app.route('/', methods = ['POST', 'GET'])
 def jsonHandler():
   obj = request.get_json(force=True)
+  obj['sentiment'] = { 'score': 0.4, 'magnitude': 0.9 }
   logMsg(json.dumps(obj))
   return json.dumps(obj)
 

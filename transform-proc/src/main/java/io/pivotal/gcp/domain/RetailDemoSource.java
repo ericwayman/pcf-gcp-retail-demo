@@ -1,7 +1,7 @@
 package io.pivotal.gcp.domain;
 
 /**
- * Created by mgoddard on 2/24/17.
+ * Base class for the various sources, for the Retail Demo
  */
 public class RetailDemoSource {
 
