@@ -120,9 +120,9 @@ Now the log entries appearing here should show new features in the JSON, similar
 
 ### Review: current state
 * With this change, the SCDF Processor (8) is able to interact with the Data Science Interrogator (9).
-* So far, pending a fleshed out version of (9), it only adds an example of what the Google Cloud
+* So far, pending a fleshed out version of (9), it just adds an example of what the Google Cloud
   Language API would provide, for sentiment: `"sentiment": {"magnitude": 0.9, "score": 0.4}`
-* One that REST interaction is complete, (8) simply emits the enriched message back onto the message
+* Once that REST interaction is complete, (8) simply emits the enriched message back onto the message
   queue for downstream processing.
 
 ## Resources
