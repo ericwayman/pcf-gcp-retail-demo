@@ -27,3 +27,5 @@ nbdist/
 ### Vim ###
 .*.swp
 
+### Python ###
+.pyc
