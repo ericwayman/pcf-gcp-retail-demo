@@ -28,4 +28,4 @@ nbdist/
 .*.swp
 
 ### Python ###
-.pyc
+.*.pyc
